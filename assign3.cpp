@@ -543,7 +543,7 @@ for (std::list<string>::iterator it=adj.begin(); it!=adj.end(); ++it)
 	for (std::list<int>::iterator it=fm.begin(); it!=fm.end(); ++it)
 		{
 				obj ob;
-				ob.cost=es+vertices[*it]->cost+vertices[*it]->opponentNeighborCost(-1);
+				ob.cost=es+vertices[*it]->opponentNeighborCost(-1)+vertices[*it]->cost+vertices[*it]->opponentNeighborCost(-1);
 				//cout<<"ob cost "<<ob.cost<<endl;
 				ob.dest=*it;
 				ob.group=1;
@@ -595,7 +595,7 @@ for (std::list<string>::iterator it=adj.begin(); it!=adj.end(); ++it)
 
  for (std::list<int>::iterator it=fm.begin(); it!=fm.end(); ++it)
                 {
-                                ob.cost=es+vertices[*it]->cost+vertices[*it]->opponentNeighborCost(1);
+                                ob.cost=es+vertices[*it]->opponentNeighborCost(1)+vertices[*it]->cost+vertices[*it]->opponentNeighborCost(1);
                                 ob.dest=*it;
                                 ob.group=-1;
                                 ob.action=0;
@@ -1122,7 +1122,7 @@ obj Pruned_MaxValue(int vertex,int actionl,float alpha=-65535,float beta=65535)
 
  for (std::list<int>::iterator it=fm.begin(); it!=fm.end(); ++it)
                 {
-                                ob.cost=es+vertices[*it]->cost+vertices[*it]->opponentNeighborCost(1);
+                                ob.cost=es+vertices[*it]->opponentNeighborCost(1)+vertices[*it]->cost+vertices[*it]->opponentNeighborCost(1);
                                 ob.dest=*it;
                                 ob.group=-1;
                                 ob.action=0;

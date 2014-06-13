@@ -1,5 +1,4 @@
 Name:Ravikumar Jeyaraman
-USC ID:9245816387
 
 Compilation Details:
 
@@ -8,7 +7,7 @@ type make in extracted directory
 
 or use
 
-g++ -o search main_assign1.cpp
+g++ -o war assign3.cpp
 
 
 Implementation Details:
